@@ -15,16 +15,16 @@ public class Auteur {
 
     private String prenom = INCONNU;
     private String nom = INCONNU;
-    private String paysOrigine = INCONNU;
+    private Pays paysOrigine = new Pays();
 
-    public Auteur(String prenom, String nom, String paysOrigine) {
+    public Auteur(String prenom, String nom, Pays paysOrigine) {
         setPrenom(prenom);
         setNom(nom);
         setPaysOrigine(paysOrigine);
     }
 
     public Auteur() {
-        this(INCONNU, INCONNU, INCONNU);
+        this(INCONNU, INCONNU, new Pays());
     }
 
     public String getPrenom() {
@@ -43,11 +43,11 @@ public class Auteur {
         this.nom = nom;
     }
 
-    public String getPaysOrigine() {
+    public Pays getPaysOrigine() {
         return paysOrigine;
     }
 
-    private void setPaysOrigine(String paysOrigine) {
+    public void setPaysOrigine(Pays paysOrigine) {
         this.paysOrigine = paysOrigine;
     }
 
