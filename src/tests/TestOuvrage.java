@@ -19,10 +19,6 @@ public class TestOuvrage {
         TestOuvrage test = new TestOuvrage();
         test.testOuvrages();
         test.testTrouver();
-        // création de l'object Pays
-
-        Pays pays1 = new Pays("Etats-Unis");
-        Pays pays2 = new Pays("France");
     }
 
 
