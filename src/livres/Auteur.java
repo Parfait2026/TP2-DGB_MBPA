@@ -15,7 +15,7 @@ public class Auteur {
 
     private String prenom = INCONNU;
     private String nom = INCONNU;
-    private Pays paysOrigine = new Pays();
+    private Pays paysOrigine = null;
 
     public Auteur(String prenom, String nom, Pays paysOrigine) {
         setPrenom(prenom);
@@ -24,7 +24,7 @@ public class Auteur {
     }
 
     public Auteur() {
-        this(INCONNU, INCONNU, new Pays());
+        this(INCONNU, INCONNU,null);
     }
 
     public String getPrenom() {
@@ -69,4 +69,7 @@ public class Auteur {
     public int hashCode() {
         return Objects.hash(prenom, nom, paysOrigine);
     }
+
+
+
 }

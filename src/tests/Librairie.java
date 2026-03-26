@@ -13,9 +13,9 @@ public class Librairie {
 
     public Librairie(){
         // création des objects Pays
-        Pays pays = new Pays("Canada");
-        Pays pays1 = new Pays("Etats-Unis");
-        Pays pays2 = new Pays("Suisse");
+        Pays pays = new Pays("Canada","MHG");
+        Pays pays1 = new Pays("Etats-Unis","GHQ");
+        Pays pays2 = new Pays("Suisse","HG");
 
         Auteur albertine = new Auteur("Albertine", "Tremblay", pays);
         Auteur john = new Auteur("John", "Smith", pays1);
