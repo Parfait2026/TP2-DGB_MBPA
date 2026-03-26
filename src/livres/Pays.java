@@ -35,4 +35,12 @@ public class Pays {
             throw new IllegalArgumentException("Le code doit être exactement de 3 lettres majuscules !!!");
         }
     }
+
+    @Override
+    public String toString() {
+        return "Pays{" +
+                "nomPays='" + nomPays + '\'' +
+                ", codePays='" + codePays + '\'' +
+                '}';
+    }
 }

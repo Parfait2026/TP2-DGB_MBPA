@@ -1,11 +1,13 @@
 package tests;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import livres.Ouvrage;
 import livres.Auteur;
 import livres.Pays;
+import livres.Serie;
 
 /**
  * CoursPOO 1
@@ -19,6 +21,8 @@ public class TestOuvrage {
         TestOuvrage test = new TestOuvrage();
         test.testOuvrages();
         test.testTrouver();
+        test.crerSerieEtAjouterOuvrage();
+        test.enleverOuvrage();
     }
 
 
@@ -74,7 +78,7 @@ public class TestOuvrage {
 
         System.out.println("\n-----Tests de la  méthode equals()-----------");
         //Deux ouvrages égaux
-        Ouvrage livre5 = new Ouvrage("Test", new Auteur("A", "B",new Pays("Etats-Unis")), Ouvrage.Format.PAPIER, null, 5);
+        Ouvrage livre5 = new Ouvrage("Test", new Auteur("A", "B", new Pays("Etats-Unis")), Ouvrage.Format.PAPIER, null, 5);
         Ouvrage livre6 = new Ouvrage("Test", new Auteur("A", "B", new Pays("Etats-Unis")), Ouvrage.Format.PAPIER, LocalDate.now(), 10);
         //Un qui ne l'est pas
         Ouvrage livre7 = new Ouvrage("Test", new Auteur("Z", "B", new Pays("Etats-Unis")), Ouvrage.Format.PAPIER, LocalDate.now(), 5);
@@ -101,8 +105,69 @@ public class TestOuvrage {
 
         resultat = bibliotheque.trouverOuvrages(new Auteur("Jacques", "Beaulieu", new Pays("France")));
         System.out.println("Livres de Jacques: " + resultat);
+        System.out.println();
     }
 
+    // Création d'une série, en ajoutant des ouvragses, puis enlever des ouvrages
+
+
+    // ===== CRÉATION ET AJOUT DES OUVRAGES DANS UNE SÉRIE =====
+    public void crerSerieEtAjouterOuvrage() {
+
+        // ==== CRÉATION D'UNE SÉRIE ====
+        List<Ouvrage> listOuvrage = new ArrayList<>(List.of());
+        Serie serie1 = new Serie(listOuvrage, "Romans");
+        Serie serie2 = new Serie(listOuvrage, "Journaux");
+
+        // === CRÉATION DES PAYS ===
+        Pays pays1 = new Pays("Canada");
+        Pays pays2 = new Pays("Cameroun");
+
+
+        // ===CREATION DES AUTEURS ===
+        Auteur auteur1 = new Auteur("Parfait", "Antoine", pays1);
+        Auteur auteur2 = new Auteur("Joseph", "Ignace", pays2);
+
+        // ==== CRÉATION DES OUVRAGES ====
+        Ouvrage ouvrage1 = new Ouvrage("Disque d'or", auteur1);
+        Ouvrage ouvrage2 = new Ouvrage("Livre de l'année", auteur2);
+        Ouvrage ouvrage3 = new Ouvrage("Le Figarot", auteur1);
+        Ouvrage ouvrage4 = new Ouvrage("CNN", auteur2);
+
+        System.out.println("====== AFFICHAGE DES SERIES ======");
+        // ==== PREMIÈRE SÉRIE ===
+        listOuvrage.add(ouvrage1);
+        listOuvrage.add(ouvrage2);
+        System.out.println(serie1);
+
+        // === DEUXIÈME SÉRIE ===
+        listOuvrage.add(ouvrage3);
+        listOuvrage.add(ouvrage4);
+        System.out.println(serie2);
+    }
+
+    //===== ENLEVER DES SÉRIES =====
+    public void enleverOuvrage() {
+        List<Ouvrage> listOuvrage = new ArrayList<>(List.of());
+        Serie serie1 = new Serie(listOuvrage, "Romans");
+
+        Pays pays1 = new Pays("Canada");
+        Pays pays2 = new Pays("Cameroun");
+
+        Auteur auteur1 = new Auteur("Parfait", "Antoine", pays1);
+        Auteur auteur2 = new Auteur("Joseph", "Ignace", pays2);
+
+        Ouvrage ouvrage1 = new Ouvrage("Le Figarot", auteur1);
+        Ouvrage ouvrage2 = new Ouvrage("CNN", auteur2);
+
+        System.out.println("====== ENLEVER DES OUVRAGES ======");
+        // ==== PREMIÈRE SÉRIE ===
+        listOuvrage.add(ouvrage1);
+        listOuvrage.add(ouvrage2);
+        listOuvrage.remove(ouvrage1);
+        System.out.println(serie1);
+
+    }
 
 }
 

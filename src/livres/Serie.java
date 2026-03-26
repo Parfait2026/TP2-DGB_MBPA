@@ -28,5 +28,11 @@ public class Serie {
         this.nom = nom;
     }
 
-
+    @Override
+    public String toString() {
+        return "Serie{" +
+                "nom='" + nom + '\'' +
+                ", listeOuvrages=" + listeOuvrages +
+                '}';
+    }
 }
