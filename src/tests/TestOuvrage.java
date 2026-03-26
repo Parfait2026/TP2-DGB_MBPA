@@ -170,6 +170,7 @@ public class TestOuvrage {
         listOuvrage.add(ouvrage3);
         listOuvrage.add(ouvrage4);
         System.out.println(serie2);
+        System.out.println();
     }
 
     //===== ENLEVER DES SÉRIES =====
@@ -192,6 +193,7 @@ public class TestOuvrage {
         listOuvrage.add(ouvrage2);
         listOuvrage.remove(ouvrage1);
         System.out.println(serie1);
+        System.out.println();
 
     }
 
