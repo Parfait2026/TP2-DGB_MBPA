@@ -1,9 +1,8 @@
 package tests;
 
-import livres.Auteur;
-import livres.Ouvrage;
-import livres.Pays;
+import livres.*;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,16 +23,16 @@ public class Librairie {
         auteurs.add(john);
         auteurs.add(jean);
 
-        ouvrages.add(new Ouvrage("Titre 1", john));
-        ouvrages.add(new Ouvrage("Titre 2", albertine));
-        ouvrages.add(new Ouvrage("Titre 3", john));
-        ouvrages.add(new Ouvrage("Titre 4", john));
-        ouvrages.add(new Ouvrage("Titre 5", albertine));
-        ouvrages.add(new Ouvrage("Titre 6", john));
-        ouvrages.add(new Ouvrage("Titre 7", john));
-        ouvrages.add(new Ouvrage("Titre 8", albertine,Ouvrage.Format.VIDEO));
-        ouvrages.add(new Ouvrage("Titre 9", john,Ouvrage.Format.AUDIO));
-        ouvrages.add(new Ouvrage("Titre 10", jean));
+        ouvrages.add(new OuvrageVideo("Fille sensible", john, Ouvrage.Format.VIDEO, LocalDate.now(), 3,10,1));
+        ouvrages.add(new OuvragePapier("Ma vie de demain", albertine, Ouvrage.Format.PAPIER, LocalDate.now(), 50,25));
+        ouvrages.add(new OuvrageAudio("Vient", john, Ouvrage.Format.AUDIO, null, 125,5, OuvrageAudio.FormatAudio.NUMERIQUE));
+        ouvrages.add(new OuvrageAudio("Yaoundé ma ville", john, Ouvrage.Format.AUDIO, LocalDate.now(), 34,3, OuvrageAudio.FormatAudio.ANALOGIQUE));
+        ouvrages.add(new OuvragePapier("Journal de bord", albertine,Ouvrage.Format.PAPIER, LocalDate.now(), 70,16));
+        ouvrages.add(new OuvragePapier("Avis de recherche", john, Ouvrage.Format.PAPIER, null, 1, 18));
+        ouvrages.add(new OuvrageVideo("Grand et petit", john, Ouvrage.Format.VIDEO, LocalDate.now(), 17,3,6));
+        ouvrages.add(new OuvrageVideo("Mon plan", albertine,Ouvrage.Format.VIDEO, null, 78,6,3));
+        ouvrages.add(new OuvrageAudio("Avion de chasse", john,Ouvrage.Format.AUDIO, LocalDate.now(), 24,5, OuvrageAudio.FormatAudio.NUMERIQUE));
+        ouvrages.add(new OuvrageVideo("Cégep", jean, Ouvrage.Format.VIDEO, LocalDate.now(),1,82,36));
     }
 
     public List<Auteur> getAuteurs() {
