@@ -188,7 +188,7 @@ public class TestOuvrage {
         Ouvrage ouvrage2 = new Ouvrage("CNN", auteur2);
 
         System.out.println("====== ENLEVER DES OUVRAGES ======");
-        // ==== PREMIÈRE SÉRIE ===
+        // ==== ENLEVER OUVRAGE1 DANS SÉRIE1 ===
         listOuvrage.add(ouvrage1);
         listOuvrage.add(ouvrage2);
         listOuvrage.remove(ouvrage1);
