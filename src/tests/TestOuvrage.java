@@ -186,7 +186,7 @@ public class TestOuvrage {
 
         System.out.println("====== ENLEVER DES OUVRAGES ======");
         // ==== ENLEVER OUVRAGE1 DANS SÉRIE1 ===
-//        listOuvrage.add(ouvrage1);
+        listOuvrage.add(ouvrage1);
         listOuvrage.add(ouvrage2);
         listOuvrage.remove(ouvrage1);
         System.out.println(serie1);
