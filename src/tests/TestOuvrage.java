@@ -2,6 +2,7 @@ package tests;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import livres.*;
@@ -152,10 +153,10 @@ public class TestOuvrage {
         Auteur auteur2 = new Auteur("Joseph", "Ignace", pays2);
 
         // ==== CRÉATION DES OUVRAGES ====
-        Ouvrage ouvrage1 = new OuvrageVideo("Disque d'or", auteur1, Ouvrage.Format.VIDEO,10,4.0);
-        Ouvrage ouvrage2 = new OuvragePapier("Livre de l'année", auteur2, Ouvrage.Format.PAPIER,920);
-        Ouvrage ouvrage3 = new OuvrageAudio("Le Figarot", auteur1, Ouvrage.Format.AUDIO,3, OuvrageAudio.FormatAudio.ANALOGIQUE);
-        Ouvrage ouvrage4 = new OuvrageAudio("CNN", auteur2, Ouvrage.Format.AUDIO,6, OuvrageAudio.FormatAudio.NUMERIQUE);
+        Ouvrage ouvrage1 = new OuvrageVideo("Disque d'or", auteur1, Ouvrage.Format.VIDEO, LocalDate.now(), 10, 5,4.0);
+        Ouvrage ouvrage2 = new OuvragePapier("Livre de l'année", auteur2, Ouvrage.Format.PAPIER, LocalDate.now(), 25, 920);
+        Ouvrage ouvrage3 = new OuvrageAudio("Le Figarot", auteur1, Ouvrage.Format.AUDIO, LocalDate.now(),2,3, OuvrageAudio.FormatAudio.ANALOGIQUE);
+        Ouvrage ouvrage4 = new OuvrageAudio("CNN", auteur2, Ouvrage.Format.AUDIO, LocalDate.now(), 6,6, OuvrageAudio.FormatAudio.NUMERIQUE);
 
         System.out.println("====== AFFICHAGE DES SERIES ======");
         // ==== PREMIÈRE SÉRIE ===
@@ -182,10 +183,10 @@ public class TestOuvrage {
         Auteur auteur2 = new Auteur("Joseph", "Ignace", pays2);
 
         Ouvrage ouvrage1 = new OuvrageVideo("Le Figarot", auteur1,16,5.6);
-        Ouvrage ouvrage2 = new OuvrageAudio("CNN", auteur2,20, OuvrageAudio.FormatAudio.ANALOGIQUE);
+        Ouvrage ouvrage2 = new OuvrageAudio("CNN", auteur2, Ouvrage.Format.AUDIO, LocalDate.now(),3,8, OuvrageAudio.FormatAudio.ANALOGIQUE);
 
         System.out.println("====== ENLEVER DES OUVRAGES ======");
-        // ==== ENLEVER OUVRAGE1 DANS SÉRIE1 ===
+        // ==== ENLEVER OUVRAGE1 DANS SÉRIE1 ====
         listOuvrage.add(ouvrage1);
         listOuvrage.add(ouvrage2);
         listOuvrage.remove(ouvrage1);

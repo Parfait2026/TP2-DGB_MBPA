@@ -47,9 +47,6 @@ public class OuvrageAudio extends Ouvrage {
 
     @Override
     public String toString() {
-        return "OuvrageAudio{" +
-                "durerMinute=" + durerMinute +
-                ", typeFormat=" + typeFormat +
-                '}';
+        return super.toString() + "Durée: " + durerMinute + " min, TypeFormat: " + typeFormat;
     }
 }

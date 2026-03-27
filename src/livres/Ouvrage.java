@@ -105,7 +105,7 @@ public abstract class Ouvrage {
         String affichageDAte = date != null ? date.toString() : "Non Disponible";
 
         return "[" + identificateur() + "] " + titre + " (" + auteur.getPrenom() + " "
-                + auteur.getNom() + ") - " + type + " - disponible le " + affichageDAte + " (" + nombreExemplaires + " ex.)";
+                + auteur.getNom() + ") - " + " ("+ auteur.getPaysOrigine()+ ") - "+ "\n" + type + " - disponible le " + affichageDAte + " (" + nombreExemplaires + " ex.)";
     }
 
     public void acheter(int nombre) {

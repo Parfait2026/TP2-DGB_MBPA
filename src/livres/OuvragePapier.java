@@ -31,8 +31,6 @@ public class OuvragePapier extends Ouvrage {
 
     @Override
     public String toString() {
-        return "OuvragePapier{" +
-                "nombrePages=" + nombrePages +
-                '}';
+        return super.toString() + " NombreDePages: " + nombrePages;
     }
 }

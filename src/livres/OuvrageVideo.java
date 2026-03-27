@@ -42,9 +42,6 @@ public class OuvrageVideo extends Ouvrage{
 
     @Override
     public String toString() {
-        return "OuvrageVideo{" +
-                "durerMinutes=" + durerMinutes +
-                ", tailleMb=" + tailleMb +
-                '}';
+        return super.toString() + " Durée: " + durerMinutes + " min, TailleMb: " +tailleMb;
     }
 }
